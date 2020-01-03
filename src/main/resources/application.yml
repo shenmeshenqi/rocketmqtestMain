@@ -1,0 +1,25 @@
+
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  thymeleaf:
+    cache: false
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: Zzh@3776768
+      url: jdbc:mysql://47.100.18.46/wuliu?characterEncoding=utf8&useSSL=true&serverTimezone=UTC
+      filters: stat,log4j,wall
+      max-active: 20
+      max-wait: 5000
+      initial-size: 1
+      validation-query: SELECT 'x'
+      stat-view-servlet:
+        login-password: zzh3776768
+        login-username: admin
+        enabled: true
+        url-pattern: /druid/*
+server:
+  port: 8081
